@@ -1,0 +1,39 @@
+/*==========HEADER START==========*/
+header {
+	.header-main{
+		display: flex;
+
+		.description{
+			margin-left: 100px;
+		    margin-top: 20px;
+			align-items: center;
+		}
+			
+		
+		h3{
+			
+			a{
+				font-size: 22px;
+				color: $primary-color;
+				transition: all .5s ease-in;	
+			}
+			
+		}
+	}
+
+	.header-top{
+		
+		.container{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		a{
+			font-size: 18px;
+			color: white;
+		}
+	}
+}
+/*==========HEADER END==========*/

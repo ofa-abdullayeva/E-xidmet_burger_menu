@@ -1,0 +1,290 @@
+/*Variables*/
+/*Mixins*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid {
+  padding: 0;
+  background-color: #164a9f;
+}
+
+/*==========BUTTONS START==========*/
+.btn-outline-sign {
+  background-color: transparent;
+  color: #164a9f;
+  border: 1px solid;
+  transition: all 0.5s ease-in;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn-outline-sign:hover {
+  background-color: #063146;
+  color: #f1f1f1;
+}
+
+.btn-exit {
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  width: 100%;
+  padding: 15px 30px;
+  font-weight: 700;
+  text-align: left;
+  border: none;
+}
+
+/*==========BUTTONS END==========*/
+/*========== Box  Start==========*/
+.boxes {
+  display: flex;
+  width: 100%;
+}
+
+.boxes .boxes-left, .boxes .boxes-right {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.boxes .box {
+  position: relative;
+  margin: 20px 10px;
+}
+
+.boxes .box .box-content {
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f1f1f1;
+}
+
+.boxes .box .box-content:hover {
+  background-color: #164a9f;
+  color: white;
+  transition: all .5s ease-in;
+}
+
+.boxes .box figure img {
+  padding: 10px;
+  display: block;
+}
+
+@media (max-width: 481px) {
+  .boxes .box figure img {
+    display: none;
+  }
+}
+
+.boxes .box h5 {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.boxes .box h5:hover {
+  color: white;
+}
+
+.boxes .box .sub {
+  position: absolute;
+  right: 40px;
+  bottom: 5px;
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  display: none;
+  border-radius: 5px;
+}
+
+.boxes .box .sub .sub-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+}
+
+.boxes .box .sub .sub-menu a {
+  font-size: 20px;
+  padding: 3px 6px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #164a9f;
+}
+
+.boxes .box .sub .sub-menu a:hover {
+  background-color: #164a9f;
+  color: white;
+}
+
+.boxes .box .sub .sub-menu .content {
+  font-size: 10px;
+  z-index: 100;
+  padding: 5px;
+  position: absolute;
+  top: 42px;
+  width: 140px;
+  background-color: #063146;
+  color: white;
+  text-align: center;
+  display: none;
+}
+
+.boxes .box .sub-active {
+  display: block !important;
+}
+
+.boxes .box .bars {
+  font-size: 25px;
+  margin: 3px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxes .boxes-left, .boxes .boxes-right {
+    width: 100%;
+  }
+}
+
+/*========== Box  End ==========*/
+/*==========HEADER START==========*/
+header .header-main {
+  display: flex;
+}
+
+header .header-main .description {
+  margin-left: 100px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+header .header-main h3 a {
+  font-size: 22px;
+  color: #164a9f;
+  transition: all .5s ease-in;
+}
+
+header .header-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+header .header-top a {
+  font-size: 18px;
+  color: white;
+}
+
+/*==========HEADER END==========*/
+/*==========Main START==========*/
+main .sidenav-description {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  z-index: 1000;
+  background-color: #063146;
+  color: white;
+  transition: all .5s ease-in;
+}
+
+main .sidenav-description h1 {
+  font-size: 20px;
+  background-color: #164a9f;
+  text-align: center;
+  line-height: 70px;
+  padding: 40px;
+}
+
+main .sidenav-description ul li span {
+  position: absolute;
+  right: 10px;
+  transition: all .5s ease-in;
+  transform: rotate(180deg);
+}
+
+main .sidenav-description ul li span:hover {
+  transform: rotate(90deg);
+}
+
+main .sidenav-description ul li:hover a {
+  padding-left: 30px;
+}
+
+main .sidenav-description ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 18px;
+  color: white;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-top: 1px solid #164a9f;
+  border-bottom: 1px solid #164a9f;
+  transition: all .5s ease-in;
+}
+
+main .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+main .active {
+  left: 0;
+}
+
+/*==========MAIN END==========*/
+/*==========FOOTER START==========*/
+footer {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  color: #164a9f;
+}
+
+footer span {
+  color: #164a9f;
+}
+
+footer .bg-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #164a9f;
+}
+
+/*==========FOOTER END==========*/
